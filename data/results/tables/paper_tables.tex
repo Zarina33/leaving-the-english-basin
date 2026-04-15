@@ -1,0 +1,43 @@
+% ============================================================
+% Auto-generated tables for emotion probing paper
+% ============================================================
+\usepackage{booktabs}  % add to preamble
+
+% --- Table 1: Probing Accuracy ---
+\begin{table}[ht]
+\centering
+\caption{Best layer-wise probing accuracy per language. Chance level = 1/6 $\approx$ 0.167.}
+\label{tab:probing}
+\begin{tabular}{lrrrrr}
+\toprule
+Language & \multicolumn{2}{c}{Gemma 4 E4B} & \multicolumn{2}{c}{Qwen3-8B} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+& Layer & Acc $\pm$ Std & Layer & Acc $\pm$ Std \\
+\midrule
+English & 0 & 0.593 $\pm$ 0.033 & 9 & 0.614 $\pm$ 0.018 \\
+Russian & 6 & 0.503 $\pm$ 0.028 & 11 & 0.593 $\pm$ 0.034 \\
+Kyrgyz & 4 & 0.459 $\pm$ 0.016 & 27 & 0.478 $\pm$ 0.029 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% --- Table 3: Transfer Accuracy ---
+\begin{table}[ht]
+\centering
+\caption{Peak cross-lingual transfer accuracy. Models trained on source language, tested on target.}
+\label{tab:transfer}
+\begin{tabular}{lrrrr}
+\toprule
+Direction & \multicolumn{2}{c}{Gemma 4 E4B} & \multicolumn{2}{c}{Qwen3-8B} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+& Peak Acc & Layer & Peak Acc & Layer \\
+\midrule
+EN → RU & 0.561 & 6 & 0.751 & 11 \\
+EN → KY & 0.329 & 11 & 0.386 & 17 \\
+RU → EN & 0.556 & 9 & 0.744 & 21 \\
+RU → KY & 0.384 & 8 & 0.361 & 17 \\
+KY → EN & 0.393 & 13 & 0.476 & 18 \\
+KY → RU & 0.399 & 14 & 0.502 & 15 \\
+\bottomrule
+\end{tabular}
+\end{table}

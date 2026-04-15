@@ -1,0 +1,46 @@
+# Data — large files not tracked
+data/processed/
+data/translated/
+data/raw/
+
+# Keep results structure but not heavy numpy files
+data/results/**/*.npz
+data/results/**/*.npy
+
+# Paper aux files
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.ipynb
+
+# Environment
+.env
+*.env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

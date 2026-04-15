@@ -1,0 +1,7 @@
+Direction,Gemma4 Peak Acc,Gemma4 Layer,Qwen3 Peak Acc,Qwen3 Layer
+EN → RU,0.561,6,0.751,11
+EN → KY,0.329,11,0.386,17
+RU → EN,0.556,9,0.744,21
+RU → KY,0.384,8,0.361,17
+KY → EN,0.393,13,0.476,18
+KY → RU,0.399,14,0.502,15

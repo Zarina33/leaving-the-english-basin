@@ -1,0 +1,4 @@
+Pair,Gemma4 Peak CKA,Gemma4 Layer,Qwen3 Peak CKA,Qwen3 Layer
+EN → RU,0.599,12,0.604,22
+EN → KY,0.575,12,0.62,19
+RU → KY,0.599,21,0.62,19

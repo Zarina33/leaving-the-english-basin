@@ -1,0 +1,4 @@
+Language,Gemma4 Layer,Gemma4 Acc,Gemma4 ±Std,Qwen3 Layer,Qwen3 Acc,Qwen3 ±Std
+English,0,0.593,0.033,9,0.614,0.018
+Russian,6,0.503,0.028,11,0.593,0.034
+Kyrgyz,4,0.459,0.016,27,0.478,0.029
