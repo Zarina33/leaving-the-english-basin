@@ -1,0 +1,4 @@
+lang,gemma4_layer,gemma4_acc,gemma4_std,qwen3_layer,qwen3_acc,qwen3_std,mistral_layer,mistral_acc,mistral_std,llama_layer,llama_acc,llama_std,xlmr_layer,xlmr_acc,xlmr_std
+EN,0,0.593,0.033,9,0.614,0.018,5,0.618,0.021,1,0.626,0.013,12,0.549,0.035
+RU,6,0.503,0.028,11,0.593,0.034,9,0.561,0.032,7,0.567,0.037,12,0.486,0.051
+KY,4,0.459,0.016,27,0.478,0.029,2,0.451,0.03,3,0.482,0.03,18,0.455,0.021

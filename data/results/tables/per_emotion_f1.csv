@@ -1,0 +1,73 @@
+model,lang,emotion,best_f1,best_layer
+Gemma 4 E4B,EN,anger,0.584,15
+Gemma 4 E4B,EN,disgust,0.655,10
+Gemma 4 E4B,EN,fear,0.764,0
+Gemma 4 E4B,EN,joy,0.814,1
+Gemma 4 E4B,EN,sadness,0.696,0
+Gemma 4 E4B,EN,surprise,0.624,15
+Gemma 4 E4B,RU,anger,0.613,34
+Gemma 4 E4B,RU,disgust,0.643,9
+Gemma 4 E4B,RU,fear,0.711,15
+Gemma 4 E4B,RU,joy,0.801,6
+Gemma 4 E4B,RU,sadness,0.648,14
+Gemma 4 E4B,RU,surprise,0.639,11
+Gemma 4 E4B,KY,anger,0.605,0
+Gemma 4 E4B,KY,disgust,0.645,30
+Gemma 4 E4B,KY,fear,0.688,4
+Gemma 4 E4B,KY,joy,0.748,6
+Gemma 4 E4B,KY,sadness,0.66,22
+Gemma 4 E4B,KY,surprise,0.623,23
+Qwen3-8B,EN,anger,0.583,8
+Qwen3-8B,EN,disgust,0.674,1
+Qwen3-8B,EN,fear,0.777,5
+Qwen3-8B,EN,joy,0.822,27
+Qwen3-8B,EN,sadness,0.682,20
+Qwen3-8B,EN,surprise,0.643,27
+Qwen3-8B,RU,anger,0.602,8
+Qwen3-8B,RU,disgust,0.661,28
+Qwen3-8B,RU,fear,0.712,13
+Qwen3-8B,RU,joy,0.825,30
+Qwen3-8B,RU,sadness,0.678,14
+Qwen3-8B,RU,surprise,0.605,17
+Qwen3-8B,KY,anger,0.59,29
+Qwen3-8B,KY,disgust,0.695,36
+Qwen3-8B,KY,fear,0.678,34
+Qwen3-8B,KY,joy,0.754,23
+Qwen3-8B,KY,sadness,0.669,35
+Qwen3-8B,KY,surprise,0.626,17
+Mistral-7B,EN,anger,0.616,3
+Mistral-7B,EN,disgust,0.711,3
+Mistral-7B,EN,fear,0.774,2
+Mistral-7B,EN,joy,0.796,7
+Mistral-7B,EN,sadness,0.698,6
+Mistral-7B,EN,surprise,0.651,22
+Mistral-7B,RU,anger,0.593,2
+Mistral-7B,RU,disgust,0.666,5
+Mistral-7B,RU,fear,0.72,6
+Mistral-7B,RU,joy,0.807,21
+Mistral-7B,RU,sadness,0.675,2
+Mistral-7B,RU,surprise,0.642,4
+Mistral-7B,KY,anger,0.625,32
+Mistral-7B,KY,disgust,0.685,26
+Mistral-7B,KY,fear,0.685,1
+Mistral-7B,KY,joy,0.778,24
+Mistral-7B,KY,sadness,0.684,7
+Mistral-7B,KY,surprise,0.633,27
+Llama-3.1-8B,EN,anger,0.608,8
+Llama-3.1-8B,EN,disgust,0.668,4
+Llama-3.1-8B,EN,fear,0.775,1
+Llama-3.1-8B,EN,joy,0.794,19
+Llama-3.1-8B,EN,sadness,0.68,24
+Llama-3.1-8B,EN,surprise,0.662,2
+Llama-3.1-8B,RU,anger,0.587,8
+Llama-3.1-8B,RU,disgust,0.684,16
+Llama-3.1-8B,RU,fear,0.716,29
+Llama-3.1-8B,RU,joy,0.772,4
+Llama-3.1-8B,RU,sadness,0.691,8
+Llama-3.1-8B,RU,surprise,0.607,10
+Llama-3.1-8B,KY,anger,0.637,24
+Llama-3.1-8B,KY,disgust,0.695,30
+Llama-3.1-8B,KY,fear,0.694,2
+Llama-3.1-8B,KY,joy,0.778,27
+Llama-3.1-8B,KY,sadness,0.688,32
+Llama-3.1-8B,KY,surprise,0.643,27

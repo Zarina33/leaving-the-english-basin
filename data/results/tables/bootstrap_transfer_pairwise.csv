@@ -1,0 +1,37 @@
+direction,model_a,model_b,diff,p_holm,sig
+EN→RU,Gemma 4 E4B,Qwen3-8B,-0.176,0.0,***
+EN→RU,Gemma 4 E4B,Mistral-7B,-0.064,0.0004,***
+EN→RU,Gemma 4 E4B,Llama-3.1-8B,-0.174,0.0,***
+EN→RU,Qwen3-8B,Mistral-7B,0.112,0.0,***
+EN→RU,Qwen3-8B,Llama-3.1-8B,0.003,0.8864,ns
+EN→RU,Mistral-7B,Llama-3.1-8B,-0.109,0.0,***
+EN→KY,Gemma 4 E4B,Qwen3-8B,-0.038,0.064,ns
+EN→KY,Gemma 4 E4B,Mistral-7B,0.091,0.0,***
+EN→KY,Gemma 4 E4B,Llama-3.1-8B,-0.065,0.0006,***
+EN→KY,Qwen3-8B,Mistral-7B,0.128,0.0,***
+EN→KY,Qwen3-8B,Llama-3.1-8B,-0.027,0.1284,ns
+EN→KY,Mistral-7B,Llama-3.1-8B,-0.155,0.0,***
+RU→EN,Gemma 4 E4B,Qwen3-8B,-0.157,0.0,***
+RU→EN,Gemma 4 E4B,Mistral-7B,-0.173,0.0,***
+RU→EN,Gemma 4 E4B,Llama-3.1-8B,-0.204,0.0,***
+RU→EN,Qwen3-8B,Mistral-7B,-0.016,0.3274,ns
+RU→EN,Qwen3-8B,Llama-3.1-8B,-0.047,0.009,**
+RU→EN,Mistral-7B,Llama-3.1-8B,-0.031,0.1016,ns
+RU→KY,Gemma 4 E4B,Qwen3-8B,0.024,0.18,ns
+RU→KY,Gemma 4 E4B,Mistral-7B,0.122,0.0,***
+RU→KY,Gemma 4 E4B,Llama-3.1-8B,-0.044,0.0336,*
+RU→KY,Qwen3-8B,Mistral-7B,0.098,0.0,***
+RU→KY,Qwen3-8B,Llama-3.1-8B,-0.068,0.0,***
+RU→KY,Mistral-7B,Llama-3.1-8B,-0.166,0.0,***
+KY→EN,Gemma 4 E4B,Qwen3-8B,-0.058,0.0042,**
+KY→EN,Gemma 4 E4B,Mistral-7B,0.093,0.0,***
+KY→EN,Gemma 4 E4B,Llama-3.1-8B,-0.052,0.0068,**
+KY→EN,Qwen3-8B,Mistral-7B,0.151,0.0,***
+KY→EN,Qwen3-8B,Llama-3.1-8B,0.006,0.7486,ns
+KY→EN,Mistral-7B,Llama-3.1-8B,-0.145,0.0,***
+KY→RU,Gemma 4 E4B,Qwen3-8B,-0.089,0.0,***
+KY→RU,Gemma 4 E4B,Mistral-7B,0.058,0.0024,**
+KY→RU,Gemma 4 E4B,Llama-3.1-8B,-0.084,0.0,***
+KY→RU,Qwen3-8B,Mistral-7B,0.147,0.0,***
+KY→RU,Qwen3-8B,Llama-3.1-8B,0.005,0.7788,ns
+KY→RU,Mistral-7B,Llama-3.1-8B,-0.142,0.0,***

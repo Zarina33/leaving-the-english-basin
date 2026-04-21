@@ -1,0 +1,19 @@
+lang,model_a,model_b,diff,p_raw,p_holm,sig
+EN,Gemma 4 E4B,Qwen3-8B,-0.013,0.3224,0.9294,ns
+EN,Gemma 4 E4B,Mistral-7B,-0.014,0.3098,0.9294,ns
+EN,Gemma 4 E4B,Llama-3.1-8B,-0.039,0.001,0.006,**
+EN,Qwen3-8B,Mistral-7B,-0.001,0.9726,0.9726,ns
+EN,Qwen3-8B,Llama-3.1-8B,-0.026,0.052,0.26,ns
+EN,Mistral-7B,Llama-3.1-8B,-0.025,0.0544,0.26,ns
+RU,Gemma 4 E4B,Qwen3-8B,-0.068,0.0,0.0,***
+RU,Gemma 4 E4B,Mistral-7B,-0.047,0.0008,0.0032,**
+RU,Gemma 4 E4B,Llama-3.1-8B,-0.059,0.0,0.0,***
+RU,Qwen3-8B,Mistral-7B,0.021,0.0912,0.2736,ns
+RU,Qwen3-8B,Llama-3.1-8B,0.009,0.4498,0.7308,ns
+RU,Mistral-7B,Llama-3.1-8B,-0.011,0.3654,0.7308,ns
+KY,Gemma 4 E4B,Qwen3-8B,-0.016,0.2322,0.5274,ns
+KY,Gemma 4 E4B,Mistral-7B,0.018,0.1758,0.5274,ns
+KY,Gemma 4 E4B,Llama-3.1-8B,-0.026,0.0468,0.1872,ns
+KY,Qwen3-8B,Mistral-7B,0.034,0.0104,0.052,ns
+KY,Qwen3-8B,Llama-3.1-8B,-0.01,0.4652,0.5274,ns
+KY,Mistral-7B,Llama-3.1-8B,-0.045,0.0002,0.0012,**

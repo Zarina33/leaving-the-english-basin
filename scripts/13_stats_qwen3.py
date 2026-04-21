@@ -1,7 +1,7 @@
 """
 Step 13: Statistical tests for Qwen3-8B + comparison with Gemma 4.
 
-1. Permutation test (100 runs) for Qwen3 probing significance
+1. Permutation test (1000 runs) for Qwen3 probing significance
 2. Paired t-test: Gemma4 vs Qwen3 per language at best layers
 3. Fig 16: Permutation baseline comparison (both models)
 4. Fig 17: Significance heatmap across layers
@@ -34,7 +34,7 @@ Q_RESULTS   = Path("data/results/qwen3")
 FIG_DIR     = Path("data/results/figures")
 
 N_FOLDS      = 5
-N_PERMUT     = 100
+N_PERMUT     = 1000
 N_EPOCHS     = 300
 LR_RATE      = 1e-2
 RANDOM_STATE = 42
