@@ -1,0 +1,21 @@
+
+=== llama EN (sentence idx 3) ===
+  L 0 (frac 0.00): '輪' 'ersh' 'erdale' 'افت' ' Geme' 'illet' '抜' 'ackbar'
+  L 8 (frac 0.25): '.GraphicsUnit' '#echo' 'aeda' 'ویزی' 'اسطة' '(크기' 'وینت' ' 다운받기'
+  L16 (frac 0.50): '.GraphicsUnit' 'ویزی' 'اسطة' '(크기' 'iddi' 'urette' 'ekk' 'aeda'
+  L24 (frac 0.75): '.GraphicsUnit' 'urette' 'ekk' ' insure' 'alink' '(크기' 'وینت' 'ویزی'
+  L32 (frac 1.00): ' the' ' racism' ' your' ' white' ' Trump' ' that' ' racist' ' people'
+
+=== llama RU (sentence idx 3) ===
+  L 0 (frac 0.00): ' ' ' for' ',' ' at' ';' ':' '.' 'ось'
+  L 8 (frac 0.25): '.GraphicsUnit' 'ویزی' 'aeda' '#echo' 'وینت' 'iddi' 'ekk' '(크기'
+  L16 (frac 0.50): '.GraphicsUnit' 'iddi' 'ویزی' 'urette' '(크기' 'ekk' 'aeda' '#echo'
+  L24 (frac 0.75): '.GraphicsUnit' 'aeda' 'iddi' 'urette' 'oftware' 'úsqueda' 'emem' 'Insensitive'
+  L32 (frac 1.00): '\n' '.' ',' '...' ' в' ' и' '-' ' из'
+
+=== llama KY (sentence idx 3) ===
+  L 0 (frac 0.00): 'ôn' 'λεύ' 'rena' ' Pine' ' overhe' ' et' ' rid' 'ilet'
+  L 8 (frac 0.25): '.GraphicsUnit' 'podob' 'وینت' 'afd' '�' 'iddi' '(Have' 'vail'
+  L16 (frac 0.50): '.GraphicsUnit' 'isay' 'ebek' 'vais' 'lán' 'rippling' 'modifiable' 'zcze'
+  L24 (frac 0.75): 'vais' 'ỳ' ' Ý' ' кир' 'LIK' '�' 'лик' ' elect'
+  L32 (frac 1.00): '�' '�' '�' 'к' 'г' 'н' ' ж' 'р'

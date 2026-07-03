@@ -7,6 +7,12 @@ data/raw/
 data/results/**/*.npz
 data/results/**/*.npy
 
+# Stray LaTeX log from broken nonstop runs
+texput.log
+
+# Run logs
+logs/
+
 # Paper aux files
 paper/*.aux
 paper/*.bbl

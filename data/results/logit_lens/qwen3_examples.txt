@@ -1,0 +1,21 @@
+
+=== qwen3 EN (sentence idx 3) ===
+  L 0 (frac 0.00): ' dis' 'ISIS' ' inf' ' Dis' 'Dismiss' ' mutil' '深入开展' ' diff'
+  L 9 (frac 0.25): 'أوضاع' 'مصلحة' 'مصالح' 'مفاوضات' '_tC' 'مصل' '淟' 'مناط'
+  L18 (frac 0.50): 'أوضاع' 'Cumhurbaşkan' '_tC' 'مصلحة' '|RF' 'โปรแ' 'مصل' '玿'
+  L27 (frac 0.75): 'Cumhurbaşkan' 'Cumhurbaşkanı' '當您在' '淟' '使用網路' '.didReceiveMemoryWarning' '—but' '…”'
+  L36 (frac 1.00): ' the' ' red' ' right' ' white' ' un' ' her' ' people' ' re'
+
+=== qwen3 RU (sentence idx 3) ===
+  L 0 (frac 0.00): 'oS' 'ORITY' 'DataService' ' album' 'uator' '扫黑除' '专辑' ' subclass'
+  L 9 (frac 0.25): 'أوضاع' 'مصلحة' 'مفاوضات' '淟' 'مصالح' '_tC' '玿' 'مصل'
+  L18 (frac 0.50): '.didReceiveMemoryWarning' '玿' 'أوضاع' '峛' '讻' '|RF' '_tC' '动摇'
+  L27 (frac 0.75): '.didReceiveMemoryWarning' ' р' ' о' ' б' ' н' ' уч' 'ш' ' а'
+  L36 (frac 1.00): ' в' ' к' ' о' ' а' ' н' ' с' ' у' ' и'
+
+=== qwen3 KY (sentence idx 3) ===
+  L 0 (frac 0.00): '贴' ',application' 'cth' 'ObjectType' ' cup' 'finder' 'cps' '(OP'
+  L 9 (frac 0.25): '(KP' '实践活动' '悈' '_mD' '.didReceiveMemoryWarning' '_tcb' '|RF' '_regeneration'
+  L18 (frac 0.50): '.didReceiveMemoryWarning' '(KP' 'ví' '.Xr' '|RF' '_vlog' 'RGBO' '实践活动'
+  L27 (frac 0.75): 'FilterWhere' 'ilik' '.didReceiveMemoryWarning' '्' 'ай' 'ParallelGroup' ' indeb' '实践活动'
+  L36 (frac 1.00): ' с' ' т' ' б' ' к' ' у' ' а' ' о' ' д'
