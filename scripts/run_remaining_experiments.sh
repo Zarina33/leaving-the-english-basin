@@ -6,7 +6,7 @@
 set +e
 mkdir -p logs
 
-PY="/home/zarina/anaconda3/envs/gemma4/bin/python -u"
+PY="python -u"
 LOG="logs/remaining.log"
 
 run() {
