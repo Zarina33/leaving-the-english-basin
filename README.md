@@ -46,10 +46,10 @@ This repository contains the complete reproducible pipeline: all scripts, experi
 │
 ├── data/
 │   ├── annotations/                  # Human annotations for IAA
-│   │   ├── author_annotations.csv
-│   │   ├── second_reviewer_annotations.csv
-│   │   ├── author_200.csv
-│   │   ├── second_reviewer_200.csv
+│   │   ├── annotator_a_annotations.csv
+│   │   ├── annotator_b_annotations.csv
+│   │   ├── annotator_a_200.csv
+│   │   ├── annotator_b_200.csv
 │   │   ├── iaa_summary.csv           # Cohen's kappa / agreement metrics
 │   │   └── *_template.csv            # Blank annotation templates
 │   └── results/
