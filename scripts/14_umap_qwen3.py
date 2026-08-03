@@ -84,16 +84,15 @@ def main():
     qwen_hs  = {lang: np.load(QWEN_DIR  / f"hidden_states_{lang}.npz")["hidden_states"]
                 for lang in ["en", "ru", "ky"]}
 
-    gemma_prob = pd.read_csv(RESULTS_DIR / "probing_detailed.csv")
-    qwen_prob  = pd.read_csv(Q_RESULTS   / "probing_detailed.csv")
+    # Best layers per language — from the UNIFIED probing run (Table 3 of the
+    # paper), so the figure matches the reported best layers.
+    uni = pd.read_csv("data/results/tables/unified_probing.csv")
+    def best_layer(model_name, lang):
+        sub = uni[(uni["model"] == model_name) & (uni["lang"] == lang.upper())]
+        return int(sub["layer"].iloc[0])
 
-    # Best layers per language
-    def best_layer(df, lang):
-        sub = df[df["lang"] == lang]
-        return int(sub.loc[sub["acc_mean"].idxmax(), "layer"])
-
-    gemma_best = {l: best_layer(gemma_prob, l) for l in ["en", "ru", "ky"]}
-    qwen_best  = {l: best_layer(qwen_prob,  l) for l in ["en", "ru", "ky"]}
+    gemma_best = {l: best_layer("Gemma 4 E4B", l) for l in ["en", "ru", "ky"]}
+    qwen_best  = {l: best_layer("Qwen3-8B",  l) for l in ["en", "ru", "ky"]}
 
     print("Best layers — Gemma4:", gemma_best)
     print("Best layers — Qwen3: ", qwen_best)

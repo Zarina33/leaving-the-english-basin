@@ -57,11 +57,16 @@ def main():
             ax.plot(s.layer_frac, s.p_cyr, color=CYR_COLOR, lw=2,
                     label=f"{lang.upper()} (Cyrillic)")
             ax.fill_between(s.layer_frac, s.p_en, color=EN_COLOR, alpha=0.08)
-            # mark the switch-back layer (last-quartile crossing where cyr > en)
-            late = s[s.layer_frac >= 0.75]
-            cross = late[late.p_cyr > late.p_en]
-            if len(cross):
-                xl = cross.iloc[0].layer_frac
+            # mark the switch-back layer: first layer from which cyr > en
+            # holds through to the output (sustained crossing)
+            xl = None
+            vals = s.reset_index(drop=True)
+            for i in range(len(vals)):
+                tail = vals.iloc[i:]
+                if (tail.p_cyr > tail.p_en).all():
+                    xl = vals.iloc[i].layer_frac
+                    break
+            if xl is not None:
                 ax.axvline(xl, color="gray", ls="--", lw=1)
                 ax.text(xl - 0.02, 0.5, "switch-back", rotation=90,
                         va="center", ha="right", fontsize=7, color="gray")
@@ -72,11 +77,12 @@ def main():
             if c == 0:
                 pretty = {"llama": "Llama-3.1-8B", "qwen3": "Qwen3-8B",
                           "mistral": "Mistral-7B"}.get(model, model)
-                ax.set_ylabel(f"{pretty}\nfraction of top-k tokens", fontsize=9)
+                ax.set_ylabel(f"{pretty}\nfraction of top-20 tokens", fontsize=9)
             if r == len(models) - 1:
                 ax.set_xlabel("normalized depth (layer / N)", fontsize=9)
             ax.grid(alpha=0.25)
     axes[0][0].legend(fontsize=8, loc="center left")
+    axes[0][1].legend(fontsize=8, loc="center left")
     fig.tight_layout()
     FIG_PATH.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(FIG_PATH, dpi=200, bbox_inches="tight")

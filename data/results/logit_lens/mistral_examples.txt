@@ -1,0 +1,21 @@
+
+=== mistral EN (sentence idx 3) ===
+  L 0 (frac 0.00): 'adel' 'werken' 'udo' 'чо' 'nast' 'områ' 'zel' 'anst'
+  L 8 (frac 0.25): 'kennis' 'biologie' 'artikel' 'besk' 'dévelop' 'delen' 'få' 'Мекси'
+  L16 (frac 0.50): 'biologie' 'kennis' 'artikel' 'dévelop' 'péri' 'delen' 'Мекси' 'diffé'
+  L24 (frac 0.75): 'kennis' 'biologie' 'racism' 'ál' 'racist' 'péri' 'égal' 'bekan'
+  L32 (frac 1.00): 'the' 'it' '“' 'that' 'a' 'I' 'this' 'people'
+
+=== mistral RU (sentence idx 3) ===
+  L 0 (frac 0.00): 'oya' 'ueto' 'icher' '¯' 'anel' 'avax' 'AUT' 'AME'
+  L 8 (frac 0.25): 'kennis' 'biologie' 'besk' 'dévelop' 'artikel' 'delen' 'få' 'ingår'
+  L16 (frac 0.50): 'kennis' 'biologie' 'dévelop' 'péri' 'diffé' 'artikel' 'bekan' 'ingår'
+  L24 (frac 0.75): 'kennis' 'bekan' 'ingår' 'diffé' 'dévelop' 'Fuß' 'espa' 'crít'
+  L32 (frac 1.00): 'в' '' 'на' 'по' ',' 'с' 'не' 'за'
+
+=== mistral KY (sentence idx 3) ===
+  L 0 (frac 0.00): 'unächst' 'aur' 'uits' 'anter' 'riterion' 'SON' 'stride' 'gage'
+  L 8 (frac 0.25): 'kennis' 'biologie' 'dévelop' 'diffé' 'péri' 'delen' 'ingår' 'artikel'
+  L16 (frac 0.50): 'kennis' 'dévelop' 'scriptstyle' 'nouve' 'biologie' 'undial' 'péri' 'plaatst'
+  L24 (frac 0.75): 'Mong' 'denen' 'Turk' '̧' 'bekan' 'uu' '⋆' 'hä'
+  L32 (frac 1.00): '' 'т' 'л' 'г' 'а' 'д' 'н' 'о'

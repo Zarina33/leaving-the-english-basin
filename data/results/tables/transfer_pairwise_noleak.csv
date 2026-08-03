@@ -1,0 +1,37 @@
+direction,model_hi,model_lo,delta,p_holm
+EN->KY,Llama,Mistral,0.159,0.0006
+EN->KY,Llama,Gemma 4,0.108,0.002
+EN->KY,Qwen3,Mistral,0.095,0.0448
+EN->KY,Llama,Qwen3,0.064,0.1074
+EN->KY,Gemma 4,Mistral,0.051,0.2992
+EN->KY,Qwen3,Gemma 4,0.044,0.2992
+EN->RU,Qwen3,Gemma 4,0.084,0.0924
+EN->RU,Qwen3,Llama,0.044,0.737
+EN->RU,Qwen3,Mistral,0.044,0.737
+EN->RU,Llama,Gemma 4,0.041,0.737
+EN->RU,Mistral,Gemma 4,0.041,0.737
+EN->RU,Llama,Mistral,0.0,1.0
+KY->EN,Qwen3,Mistral,0.162,0.0006
+KY->EN,Qwen3,Gemma 4,0.122,0.004
+KY->EN,Qwen3,Llama,0.101,0.0248
+KY->EN,Llama,Mistral,0.061,0.2046
+KY->EN,Gemma 4,Mistral,0.041,0.5228
+KY->EN,Llama,Gemma 4,0.02,0.5852
+KY->RU,Qwen3,Mistral,0.145,0.0006
+KY->RU,Llama,Mistral,0.125,0.002
+KY->RU,Qwen3,Gemma 4,0.074,0.1968
+KY->RU,Gemma 4,Mistral,0.071,0.1968
+KY->RU,Llama,Gemma 4,0.054,0.344
+KY->RU,Qwen3,Llama,0.02,0.5614
+RU->EN,Qwen3,Gemma 4,0.03,1.0
+RU->EN,Qwen3,Llama,0.03,1.0
+RU->EN,Qwen3,Mistral,0.017,1.0
+RU->EN,Mistral,Gemma 4,0.014,1.0
+RU->EN,Mistral,Llama,0.014,1.0
+RU->EN,Gemma 4,Llama,0.0,1.0
+RU->KY,Llama,Mistral,0.064,0.168
+RU->KY,Gemma 4,Mistral,0.051,0.896
+RU->KY,Qwen3,Mistral,0.037,1.0
+RU->KY,Llama,Qwen3,0.027,1.0
+RU->KY,Gemma 4,Qwen3,0.014,1.0
+RU->KY,Llama,Gemma 4,0.014,1.0

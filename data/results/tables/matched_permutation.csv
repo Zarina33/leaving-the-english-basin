@@ -1,0 +1,2 @@
+model,lang,layer,real_acc,null_mean,null_max,n_perm,p
+mistral,ky,5,0.4507,0.1664,0.1986,1000,0.000999

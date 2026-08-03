@@ -35,11 +35,14 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # key -> (hidden-states dir, results dir for best-layer lookup)
 MODELS = {
-    "gemma4":  (DATA_ROOT,             RES_ROOT),
-    "qwen3":   (DATA_ROOT / "qwen3",   RES_ROOT / "qwen3"),
-    "llama":   (DATA_ROOT / "llama",   RES_ROOT / "llama"),
-    "mistral": (DATA_ROOT / "mistral", RES_ROOT / "mistral"),
-    "xlmr":    (DATA_ROOT / "xlmr",    RES_ROOT / "xlmr"),
+    "gemma4":     (DATA_ROOT,                RES_ROOT),
+    "qwen3":      (DATA_ROOT / "qwen3",      RES_ROOT / "qwen3"),
+    "llama":      (DATA_ROOT / "llama",      RES_ROOT / "llama"),
+    "mistral":    (DATA_ROOT / "mistral",    RES_ROOT / "mistral"),
+    "xlmr":       (DATA_ROOT / "xlmr",       RES_ROOT / "xlmr"),
+    "mbert":      (DATA_ROOT / "mbert",      RES_ROOT / "mbert"),
+    "qwen25_7b":  (DATA_ROOT / "qwen25_7b",  RES_ROOT / "qwen25_7b"),
+    "olmo2_7b":   (DATA_ROOT / "olmo2_7b",   RES_ROOT / "olmo2_7b"),
 }
 
 

@@ -1,0 +1,7 @@
+model,src,tgt,layer_star,dev_acc,test_acc
+qwen3_fp16,en,ru,22,0.6014,0.5811
+qwen3_fp16,en,ky,17,0.3649,0.3851
+qwen3_fp16,ru,en,11,0.5845,0.5507
+qwen3_fp16,ru,ky,31,0.277,0.2601
+qwen3_fp16,ky,en,20,0.4595,0.402
+qwen3_fp16,ky,ru,14,0.4426,0.4291

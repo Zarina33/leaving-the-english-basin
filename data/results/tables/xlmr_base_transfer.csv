@@ -1,0 +1,7 @@
+model,src,tgt,layer_star,dev_acc,test_acc
+xlmr_base,en,ru,8,0.3919,0.375
+xlmr_base,en,ky,9,0.2905,0.2973
+xlmr_base,ru,en,6,0.4122,0.3682
+xlmr_base,ru,ky,6,0.3176,0.2838
+xlmr_base,ky,en,8,0.3108,0.3209
+xlmr_base,ky,ru,6,0.3345,0.3108

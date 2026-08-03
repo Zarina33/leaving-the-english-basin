@@ -40,14 +40,31 @@ WD           = 1e-4
 RANDOM_STATE = 42
 N_BOOTSTRAP  = 10_000
 
-# (model_key, dir_name, best layers per lang as reported in Table 2 of paper)
-MODELS = [
-    ("Gemma 4",   "",        {"ru": 6,  "ky": 4}),
-    ("Qwen3",     "qwen3",   {"ru": 11, "ky": 27}),
-    ("Llama 3.1", "llama",   {"ru": 7,  "ky": 3}),
-    ("Mistral",   "mistral", {"ru": 9,  "ky": 2}),
-    ("XLM-R",     "xlmr",    {"ru": 12, "ky": 18}),
+# (model_key, dir_name, unified_probing_name) — best layers loaded from
+# data/results/tables/unified_probing.csv so we stay in sync with Table 3.
+MODEL_META = [
+    ("Gemma 4",   "",        "Gemma 4 E4B"),
+    ("Qwen3",     "qwen3",   "Qwen3-8B"),
+    ("Llama 3.1", "llama",   "Llama-3.1-8B"),
+    ("Mistral",   "mistral", "Mistral-7B"),
+    ("XLM-R",     "xlmr",    "XLM-R"),
 ]
+
+
+def _load_unified_best_layers():
+    """Read best-layer per (model, lang) from the unified probing table."""
+    df = pd.read_csv("data/results/tables/unified_probing.csv")
+    best = {}
+    for _, row in df.iterrows():
+        best.setdefault(row["model"], {})[row["lang"].lower()] = int(row["layer"])
+    return best
+
+
+MODELS = []
+_best = _load_unified_best_layers()
+for _key, _dir, _unified_name in MODEL_META:
+    _layers = _best.get(_unified_name, {})
+    MODELS.append((_key, _dir, {"ru": _layers.get("ru"), "ky": _layers.get("ky")}))
 
 
 class LinClf(nn.Module):

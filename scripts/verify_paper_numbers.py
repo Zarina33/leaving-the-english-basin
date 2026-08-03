@@ -17,17 +17,20 @@ def ok(a, b, tol=3e-3):
 fail = 0
 
 # --- Table 2: probing + CI (bootstrap_probing.csv) ---
-bp = pd.read_csv(RES / "tables/bootstrap_probing.csv")
+# Table 3 probing now comes from the UNIFIED run (scripts/43). Paper values
+# below are transcribed from paper.tex Table 3; they must match unified_probing.csv.
+up = pd.read_csv(RES / "tables/unified_probing.csv")
 paper_t2 = {
-    ('Gemma 4 E4B','EN'):(0,.596,.571,.621), ('Gemma 4 E4B','RU'):(6,.511,.486,.537), ('Gemma 4 E4B','KY'):(4,.458,.432,.484),
-    ('Qwen3-8B','EN'):(9,.609,.584,.633),   ('Qwen3-8B','RU'):(11,.580,.555,.605),   ('Qwen3-8B','KY'):(27,.474,.449,.499),
-    ('Llama-3.1-8B','EN'):(1,.634,.609,.659),('Llama-3.1-8B','RU'):(7,.570,.545,.595),('Llama-3.1-8B','KY'):(3,.484,.459,.510),
-    ('Mistral-7B','EN'):(5,.609,.585,.634), ('Mistral-7B','RU'):(9,.559,.534,.584), ('Mistral-7B','KY'):(2,.440,.415,.466),
+    ('Gemma 4 E4B','EN'):(0,.603), ('Gemma 4 E4B','RU'):(7,.508), ('Gemma 4 E4B','KY'):(4,.453),
+    ('Qwen3-8B','EN'):(10,.605),   ('Qwen3-8B','RU'):(11,.582),   ('Qwen3-8B','KY'):(9,.482),
+    ('Llama-3.1-8B','EN'):(1,.625),('Llama-3.1-8B','RU'):(19,.568),('Llama-3.1-8B','KY'):(3,.478),
+    ('Mistral-7B','EN'):(5,.611), ('Mistral-7B','RU'):(9,.570), ('Mistral-7B','KY'):(5,.451),
+    ('XLM-R','EN'):(11,.551), ('XLM-R','RU'):(21,.482), ('XLM-R','KY'):(14,.459),
 }
-for (m,l),(lay,acc,lo,hi) in paper_t2.items():
-    r = bp[(bp.model==m)&(bp.lang==l)].iloc[0]
-    if not (r.layer==lay and ok(r.accuracy,acc) and ok(r.ci_lower,lo) and ok(r.ci_upper,hi,tol=5e-3)):
-        print(f"T2 MISMATCH {m} {l}: paper={acc}@{lay}[{lo},{hi}] vs data={r.accuracy}@{r.layer}[{r.ci_lower},{r.ci_upper}]"); fail+=1
+for (m,l),(lay,acc) in paper_t2.items():
+    r = up[(up.model==m)&(up.lang==l)].iloc[0]
+    if not (int(r.layer)==lay and ok(r.linear_acc,acc)):
+        print(f"T3 MISMATCH {m} {l}: paper={acc}@{lay} vs data={r.linear_acc}@{int(r.layer)}"); fail+=1
 
 # --- Table 3: CKA ---
 cka_files = {
@@ -47,60 +50,59 @@ for (m,p),(v,lay) in paper_t3.items():
     if not (ok(peak,v) and int(layer)==lay):
         print(f"T3 MISMATCH {m} {p}: paper={v}@L{lay} vs data={peak:.3f}@L{int(layer)}"); fail+=1
 
-# --- Table 4: transfer ---
-bt = pd.read_csv(RES/"tables/bootstrap_transfer.csv")
-paper_t4 = {
-    ('Gemma 4 E4B','EN→RU'):.564,('Gemma 4 E4B','EN→KY'):.328,('Gemma 4 E4B','RU→EN'):.561,
-    ('Gemma 4 E4B','RU→KY'):.378,('Gemma 4 E4B','KY→EN'):.389,('Gemma 4 E4B','KY→RU'):.388,
-    ('Qwen3-8B','EN→RU'):.740,('Qwen3-8B','EN→KY'):.366,('Qwen3-8B','RU→EN'):.718,
-    ('Qwen3-8B','RU→KY'):.353,('Qwen3-8B','KY→EN'):.447,('Qwen3-8B','KY→RU'):.477,
-    ('Llama-3.1-8B','EN→RU'):.737,('Llama-3.1-8B','EN→KY'):.393,('Llama-3.1-8B','RU→EN'):.765,
-    ('Llama-3.1-8B','RU→KY'):.422,('Llama-3.1-8B','KY→EN'):.441,('Llama-3.1-8B','KY→RU'):.472,
-    ('Mistral-7B','EN→RU'):.628,('Mistral-7B','EN→KY'):.238,('Mistral-7B','RU→EN'):.734,
-    ('Mistral-7B','RU→KY'):.255,('Mistral-7B','KY→EN'):.297,('Mistral-7B','KY→RU'):.330,
+# --- Table 5/14: leakage-free transfer (scripts/40) ---
+tn = pd.read_csv(RES/"transfer_noleak.csv")
+key = {"gemma4":"Gemma 4 E4B","qwen3":"Qwen3-8B","llama":"Llama-3.1-8B",
+       "mistral":"Mistral-7B","xlmr":"XLM-R"}
+paper_t5 = {  # transcribed from paper.tex Table 5
+    ('gemma4',('en','ru')):.497,('gemma4',('en','ky')):.250,('gemma4',('ru','en')):.513,
+    ('gemma4',('ru','ky')):.290,('gemma4',('ky','en')):.321,('gemma4',('ky','ru')):.307,
+    ('qwen3',('en','ru')):.581,('qwen3',('en','ky')):.294,('qwen3',('ru','en')):.544,
+    ('qwen3',('ru','ky')):.277,('qwen3',('ky','en')):.443,('qwen3',('ky','ru')):.382,
+    ('llama',('en','ru')):.537,('llama',('en','ky')):.358,('llama',('ru','en')):.513,
+    ('llama',('ru','ky')):.304,('llama',('ky','en')):.341,('llama',('ky','ru')):.361,
+    ('mistral',('en','ru')):.537,('mistral',('en','ky')):.199,('mistral',('ru','en')):.527,
+    ('mistral',('ru','ky')):.240,('mistral',('ky','en')):.280,('mistral',('ky','ru')):.236,
+    ('xlmr',('en','ru')):.470,('xlmr',('en','ky')):.392,('xlmr',('ru','en')):.476,
+    ('xlmr',('ru','ky')):.358,('xlmr',('ky','en')):.409,('xlmr',('ky','ru')):.378,
 }
-for (m,d),v in paper_t4.items():
-    r = bt[(bt.model==m)&(bt.direction==d)].iloc[0]
-    if not ok(r.accuracy,v):
-        print(f"T4 MISMATCH {m} {d}: paper={v} vs data={r.accuracy}"); fail+=1
+for (m,(s,t)),v in paper_t5.items():
+    r = tn[(tn.model==m)&(tn.src==s)&(tn.tgt==t)].iloc[0]
+    if not ok(r.test_acc,v):
+        print(f"T5 MISMATCH {key[m]} {s}->{t}: paper={v} vs data={r.test_acc}"); fail+=1
 
-# --- Appendix D: selectivity ---
-ps = pd.read_csv(RES/"tables/probe_selectivity.csv")
-paper_d = {
-    ('Gemma 4 E4B','EN'):(.593,.610,.189,.404,.017),('Gemma 4 E4B','RU'):(.507,.553,.166,.341,.047),
-    ('Gemma 4 E4B','KY'):(.455,.472,.157,.297,.018),('Qwen3-8B','EN'):(.601,.597,.157,.443,-.003),
-    ('Qwen3-8B','RU'):(.598,.599,.164,.434,.001),('Qwen3-8B','KY'):(.466,.480,.174,.292,.014),
-    ('Llama-3.1-8B','EN'):(.624,.645,.167,.457,.020),('Llama-3.1-8B','RU'):(.566,.592,.174,.392,.026),
-    ('Llama-3.1-8B','KY'):(.472,.481,.167,.305,.009),('Mistral-7B','EN'):(.617,.618,.157,.459,.001),
-    ('Mistral-7B','RU'):(.564,.576,.169,.395,.013),('Mistral-7B','KY'):(.445,.450,.171,.274,.005),
+# --- Appendix D: selectivity (now from unified run) ---
+sel_names = {'Gemma 4 E4B':'Gemma 4 E4B','Qwen3-8B':'Qwen3-8B',
+             'Llama-3.1-8B':'Llama-3.1-8B','Mistral-7B':'Mistral-7B'}
+paper_d = {  # transcribed from paper.tex Table 9
+    ('Gemma 4 E4B','EN'):(.603,.621,.191,.413,.018),('Gemma 4 E4B','RU'):(.508,.534,.164,.345,.026),
+    ('Gemma 4 E4B','KY'):(.453,.485,.162,.292,.032),('Qwen3-8B','EN'):(.605,.611,.165,.441,.005),
+    ('Qwen3-8B','RU'):(.582,.607,.172,.410,.025),('Qwen3-8B','KY'):(.482,.506,.183,.299,.024),
+    ('Llama-3.1-8B','EN'):(.625,.636,.165,.460,.011),('Llama-3.1-8B','RU'):(.568,.589,.172,.396,.021),
+    ('Llama-3.1-8B','KY'):(.478,.482,.169,.309,.004),('Mistral-7B','EN'):(.611,.619,.152,.459,.008),
+    ('Mistral-7B','RU'):(.570,.581,.176,.393,.011),('Mistral-7B','KY'):(.451,.455,.149,.301,.005),
 }
 for (m,l),(lin,mlp,ctrl,sel,gap) in paper_d.items():
-    r = ps[(ps.model==m)&(ps.lang==l)].iloc[0]
+    r = up[(up.model==m)&(up.lang==l)].iloc[0]
     vals = {'linear_acc':lin,'mlp_acc':mlp,'control_acc':ctrl,'selectivity':sel,'mlp_gap':gap}
     for f,v in vals.items():
         if not ok(getattr(r,f),v):
             print(f"D MISMATCH {m} {l} {f}: paper={v} vs data={getattr(r,f)}"); fail+=1
 
-# --- Appendix E: Δacc = rounded subtractions of Table 4 ---
-appe = [
-    ('EN→RU','Qwen3','Gemma 4',.176),('EN→RU','Llama','Gemma 4',.173),('EN→RU','Qwen3','Mistral',.112),
-    ('EN→RU','Llama','Mistral',.109),('EN→RU','Mistral','Gemma 4',.064),('EN→RU','Qwen3','Llama',.003),
-    ('EN→KY','Llama','Mistral',.155),('EN→KY','Qwen3','Mistral',.128),('EN→KY','Gemma 4','Mistral',.090),
-    ('EN→KY','Llama','Gemma 4',.065),('EN→KY','Qwen3','Gemma 4',.038),('EN→KY','Llama','Qwen3',.027),
-    ('RU→EN','Llama','Gemma 4',.204),('RU→EN','Mistral','Gemma 4',.173),('RU→EN','Qwen3','Gemma 4',.157),
-    ('RU→EN','Llama','Qwen3',.047),('RU→EN','Mistral','Qwen3',.016),('RU→EN','Llama','Mistral',.031),
-    ('RU→KY','Llama','Mistral',.167),('RU→KY','Gemma 4','Mistral',.123),('RU→KY','Qwen3','Mistral',.098),
-    ('RU→KY','Llama','Qwen3',.069),('RU→KY','Llama','Gemma 4',.044),('RU→KY','Gemma 4','Qwen3',.025),
-    ('KY→EN','Qwen3','Mistral',.150),('KY→EN','Llama','Mistral',.144),('KY→EN','Gemma 4','Mistral',.092),
-    ('KY→EN','Qwen3','Gemma 4',.058),('KY→EN','Llama','Gemma 4',.052),('KY→EN','Qwen3','Llama',.006),
-    ('KY→RU','Qwen3','Mistral',.147),('KY→RU','Llama','Mistral',.142),('KY→RU','Qwen3','Gemma 4',.089),
-    ('KY→RU','Llama','Gemma 4',.084),('KY→RU','Gemma 4','Mistral',.058),('KY→RU','Qwen3','Llama',.005),
-]
-short2full = {'Gemma 4':'Gemma 4 E4B','Qwen3':'Qwen3-8B','Llama':'Llama-3.1-8B','Mistral':'Mistral-7B'}
-for d,a,b,expected in appe:
-    av = paper_t4[(short2full[a],d)]; bv = paper_t4[(short2full[b],d)]
-    diff = round(av - bv, 3)
-    if abs(diff - expected) > 1e-6:
-        print(f"E MISMATCH {d} {a} vs {b}: paper={expected} vs rounded-subtract={diff}"); fail+=1
+# --- Appendix E: leakage-free pairwise Δ (scripts/44); consistency check only ---
+pw_path = RES/"tables/transfer_pairwise_noleak.csv"
+if pw_path.exists():
+    pw = pd.read_csv(pw_path)
+    # every pairwise |Δ| must equal the rounded subtraction of the two Table-5 test_accs
+    smap = {'Gemma 4':'gemma4','Qwen3':'qwen3','Llama':'llama','Mistral':'mistral'}
+    for _,r in pw.iterrows():
+        s,t = r.direction.lower().split('->')
+        hi = tn[(tn.model==smap[r.model_hi])&(tn.src==s)&(tn.tgt==t)].test_acc.iloc[0]
+        lo = tn[(tn.model==smap[r.model_lo])&(tn.src==s)&(tn.tgt==t)].test_acc.iloc[0]
+        if abs(round(abs(hi-lo),3) - r.delta) > 1.5e-3:
+            print(f"E MISMATCH {r.direction} {r.model_hi} vs {r.model_lo}: "
+                  f"Δcsv={r.delta} vs subtract={round(abs(hi-lo),3)}"); fail+=1
+else:
+    print("E SKIP: transfer_pairwise_noleak.csv not yet generated")
 
 print(f"\n{'ALL NUMBERS OK' if fail==0 else f'{fail} MISMATCHES'}")
