@@ -105,4 +105,65 @@ if pw_path.exists():
 else:
     print("E SKIP: transfer_pairwise_noleak.csv not yet generated")
 
+# --- Appendix S: emotion confusions (scripts/66) ---
+# Paper values transcribed from paper.tex Table "confusion_pairs" (5-model mean, EN/RU/KY).
+cs_path = RES/"tables/confusion_pairs_summary.csv"
+if cs_path.exists():
+    cs = pd.read_csv(cs_path).set_index("pair")
+    paper_s = {
+        'anger-disgust':(.168,.154,.153),    'anger-surprise':(.138,.145,.160),
+        'anger-sadness':(.148,.137,.148),    'disgust-fear':(.094,.135,.156),
+        'sadness-surprise':(.097,.102,.134), 'joy-surprise':(.092,.102,.109),
+        'disgust-sadness':(.082,.098,.101),  'fear-sadness':(.061,.079,.095),
+        'disgust-surprise':(.066,.074,.082), 'anger-fear':(.054,.073,.088),
+        'joy-sadness':(.054,.061,.091),      'fear-surprise':(.050,.070,.082),
+        'anger-joy':(.045,.060,.087),        'disgust-joy':(.034,.047,.062),
+        'fear-joy':(.026,.040,.062),
+    }
+    for p, vals in paper_s.items():
+        for l, v in zip(['EN','RU','KY'], vals):
+            if not ok(cs.loc[p, l], v, tol=6e-4):
+                print(f"S MISMATCH {p} {l}: paper={v} vs data={cs.loc[p, l]}"); fail+=1
+    # table order in the paper = descending cross-language mean
+    if list(paper_s) != list(cs.sort_values("mean", ascending=False).index):
+        print("S MISMATCH: pair order in paper != descending cross-language mean"); fail+=1
+    # summary must be the 5-model mean of confusion_pairs.csv
+    cp = pd.read_csv(RES/"tables/confusion_pairs.csv")
+    mean5 = cp.groupby(['pair','lang']).rate.mean().unstack()
+    for p in cs.index:
+        for l in ['EN','RU','KY']:
+            if not ok(mean5.loc[p, l], cs.loc[p, l], tol=6e-4):
+                print(f"S MISMATCH {p} {l}: summary={cs.loc[p, l]} vs 5-model mean={mean5.loc[p, l]:.4f}"); fail+=1
+    # pair rates must follow from the raw matrices: (C_ab + C_ba) / (n_a + n_b)
+    cm = pd.read_csv(RES/"tables/confusion_matrices.csv")
+    if cm.groupby(['model','lang']).ngroups != 15:
+        print(f"S MISMATCH: {cm.groupby(['model','lang']).ngroups} confusion matrices, expected 15"); fail+=1
+    for (m, l), g in cm.groupby(['model','lang']):
+        C = g.pivot(index='true', columns='pred', values='count').fillna(0)
+        n = C.sum(axis=1)
+        # each matrix must be the Table-3 predictions: same layer, 1,480 sentences, same accuracy
+        u = up[(up.model==m)&(up.lang==l)].iloc[0]
+        acc = sum(C.loc[e, e] for e in C.index) / n.sum()
+        if not (int(g.layer.iloc[0])==int(u.layer) and int(n.sum())==1480 and ok(acc, u.linear_acc, tol=6e-5)):
+            print(f"S MISMATCH {m} {l}: matrix acc={acc:.4f}@L{int(g.layer.iloc[0])} n={int(n.sum())} "
+                  f"vs unified={u.linear_acc}@L{int(u.layer)}"); fail+=1
+        for _, r in cp[(cp.model==m)&(cp.lang==l)].iterrows():
+            a, b = r.pair.split('-')
+            rate = (C.loc[a, b] + C.loc[b, a]) / (n[a] + n[b])
+            if not ok(rate, r.rate, tol=6e-5):
+                print(f"S MISMATCH {m} {l} {r.pair}: pairs.csv={r.rate} vs matrix={rate:.4f}"); fail+=1
+    # text claims: 13 of 15 pairs rise EN->KY; Spearman .78--.97, all p<.001, min = Qwen3 EN-KY
+    # (counted at the table's 3-decimal precision: Anger--Sadness .148/.148 is "flat")
+    n_up = sum(ky > en for en, _, ky in paper_s.values())
+    if n_up != 13:
+        print(f"S MISMATCH: pairs more confused EN->KY = {n_up}, paper says 13"); fail+=1
+    ra = pd.read_csv(RES/"tables/confusion_rank_agreement.csv")
+    lo = ra.loc[ra.spearman.idxmin()]
+    if not (len(ra)==15 and ok(ra.spearman.min(), .78, 6e-3) and ok(ra.spearman.max(), .97, 6e-3)
+            and (ra.p < 1e-3).all() and (lo.model, lo.langs)==('Qwen3-8B','EN-KY')):
+        print(f"S MISMATCH rank agreement: n={len(ra)} rho=[{ra.spearman.min():.3f},{ra.spearman.max():.3f}] "
+              f"max p={ra.p.max():.2g} min at {lo.model} {lo.langs}"); fail+=1
+else:
+    print("S SKIP: confusion_pairs_summary.csv not yet generated")
+
 print(f"\n{'ALL NUMBERS OK' if fail==0 else f'{fail} MISMATCHES'}")

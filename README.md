@@ -84,7 +84,7 @@ Gemma 4 requires a recent Transformers build.
    numbers, one run, one seed) and `40_transfer_noleak.py` (leakage-free transfer: disjoint
    train/dev/test sentence splits, target-dev layer selection).
 4. **Check** — `python scripts/verify_paper_numbers.py` compares the numbers reported in the paper
-   (transcribed inside the script) against the result CSVs.
+   (transcribed inside the script, incl. the Appendix S confusion table) against the result CSVs.
 
 Scripts numbered below 40 include earlier prototypes; where a later script supersedes one, the
 provenance table names the one the paper uses.
