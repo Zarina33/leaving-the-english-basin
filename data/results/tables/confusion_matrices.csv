@@ -1,0 +1,541 @@
+model,lang,layer,true,pred,count,row_share
+Gemma 4 E4B,EN,0,anger,anger,87,0.3783
+Gemma 4 E4B,EN,0,anger,disgust,44,0.1913
+Gemma 4 E4B,EN,0,anger,fear,12,0.0522
+Gemma 4 E4B,EN,0,anger,joy,9,0.0391
+Gemma 4 E4B,EN,0,anger,sadness,52,0.2261
+Gemma 4 E4B,EN,0,anger,surprise,26,0.113
+Gemma 4 E4B,EN,0,disgust,anger,36,0.144
+Gemma 4 E4B,EN,0,disgust,disgust,145,0.58
+Gemma 4 E4B,EN,0,disgust,fear,20,0.08
+Gemma 4 E4B,EN,0,disgust,joy,13,0.052
+Gemma 4 E4B,EN,0,disgust,sadness,18,0.072
+Gemma 4 E4B,EN,0,disgust,surprise,18,0.072
+Gemma 4 E4B,EN,0,fear,anger,8,0.032
+Gemma 4 E4B,EN,0,fear,disgust,20,0.08
+Gemma 4 E4B,EN,0,fear,fear,188,0.752
+Gemma 4 E4B,EN,0,fear,joy,9,0.036
+Gemma 4 E4B,EN,0,fear,sadness,16,0.064
+Gemma 4 E4B,EN,0,fear,surprise,9,0.036
+Gemma 4 E4B,EN,0,joy,anger,16,0.064
+Gemma 4 E4B,EN,0,joy,disgust,5,0.02
+Gemma 4 E4B,EN,0,joy,fear,5,0.02
+Gemma 4 E4B,EN,0,joy,joy,193,0.772
+Gemma 4 E4B,EN,0,joy,sadness,13,0.052
+Gemma 4 E4B,EN,0,joy,surprise,18,0.072
+Gemma 4 E4B,EN,0,sadness,anger,42,0.168
+Gemma 4 E4B,EN,0,sadness,disgust,20,0.08
+Gemma 4 E4B,EN,0,sadness,fear,12,0.048
+Gemma 4 E4B,EN,0,sadness,joy,14,0.056
+Gemma 4 E4B,EN,0,sadness,sadness,133,0.532
+Gemma 4 E4B,EN,0,sadness,surprise,29,0.116
+Gemma 4 E4B,EN,0,surprise,anger,37,0.148
+Gemma 4 E4B,EN,0,surprise,disgust,16,0.064
+Gemma 4 E4B,EN,0,surprise,fear,8,0.032
+Gemma 4 E4B,EN,0,surprise,joy,16,0.064
+Gemma 4 E4B,EN,0,surprise,sadness,26,0.104
+Gemma 4 E4B,EN,0,surprise,surprise,147,0.588
+Gemma 4 E4B,RU,7,anger,anger,85,0.3696
+Gemma 4 E4B,RU,7,anger,disgust,38,0.1652
+Gemma 4 E4B,RU,7,anger,fear,24,0.1043
+Gemma 4 E4B,RU,7,anger,joy,15,0.0652
+Gemma 4 E4B,RU,7,anger,sadness,28,0.1217
+Gemma 4 E4B,RU,7,anger,surprise,40,0.1739
+Gemma 4 E4B,RU,7,disgust,anger,32,0.128
+Gemma 4 E4B,RU,7,disgust,disgust,113,0.452
+Gemma 4 E4B,RU,7,disgust,fear,36,0.144
+Gemma 4 E4B,RU,7,disgust,joy,17,0.068
+Gemma 4 E4B,RU,7,disgust,sadness,34,0.136
+Gemma 4 E4B,RU,7,disgust,surprise,18,0.072
+Gemma 4 E4B,RU,7,fear,anger,21,0.084
+Gemma 4 E4B,RU,7,fear,disgust,34,0.136
+Gemma 4 E4B,RU,7,fear,fear,143,0.572
+Gemma 4 E4B,RU,7,fear,joy,15,0.06
+Gemma 4 E4B,RU,7,fear,sadness,22,0.088
+Gemma 4 E4B,RU,7,fear,surprise,15,0.06
+Gemma 4 E4B,RU,7,joy,anger,23,0.092
+Gemma 4 E4B,RU,7,joy,disgust,12,0.048
+Gemma 4 E4B,RU,7,joy,fear,9,0.036
+Gemma 4 E4B,RU,7,joy,joy,154,0.616
+Gemma 4 E4B,RU,7,joy,sadness,19,0.076
+Gemma 4 E4B,RU,7,joy,surprise,33,0.132
+Gemma 4 E4B,RU,7,sadness,anger,33,0.132
+Gemma 4 E4B,RU,7,sadness,disgust,27,0.108
+Gemma 4 E4B,RU,7,sadness,fear,17,0.068
+Gemma 4 E4B,RU,7,sadness,joy,21,0.084
+Gemma 4 E4B,RU,7,sadness,sadness,123,0.492
+Gemma 4 E4B,RU,7,sadness,surprise,29,0.116
+Gemma 4 E4B,RU,7,surprise,anger,35,0.14
+Gemma 4 E4B,RU,7,surprise,disgust,16,0.064
+Gemma 4 E4B,RU,7,surprise,fear,18,0.072
+Gemma 4 E4B,RU,7,surprise,joy,20,0.08
+Gemma 4 E4B,RU,7,surprise,sadness,27,0.108
+Gemma 4 E4B,RU,7,surprise,surprise,134,0.536
+Gemma 4 E4B,KY,4,anger,anger,61,0.2652
+Gemma 4 E4B,KY,4,anger,disgust,40,0.1739
+Gemma 4 E4B,KY,4,anger,fear,32,0.1391
+Gemma 4 E4B,KY,4,anger,joy,21,0.0913
+Gemma 4 E4B,KY,4,anger,sadness,33,0.1435
+Gemma 4 E4B,KY,4,anger,surprise,43,0.187
+Gemma 4 E4B,KY,4,disgust,anger,35,0.14
+Gemma 4 E4B,KY,4,disgust,disgust,121,0.484
+Gemma 4 E4B,KY,4,disgust,fear,31,0.124
+Gemma 4 E4B,KY,4,disgust,joy,18,0.072
+Gemma 4 E4B,KY,4,disgust,sadness,24,0.096
+Gemma 4 E4B,KY,4,disgust,surprise,21,0.084
+Gemma 4 E4B,KY,4,fear,anger,27,0.108
+Gemma 4 E4B,KY,4,fear,disgust,42,0.168
+Gemma 4 E4B,KY,4,fear,fear,121,0.484
+Gemma 4 E4B,KY,4,fear,joy,15,0.06
+Gemma 4 E4B,KY,4,fear,sadness,30,0.12
+Gemma 4 E4B,KY,4,fear,surprise,15,0.06
+Gemma 4 E4B,KY,4,joy,anger,26,0.104
+Gemma 4 E4B,KY,4,joy,disgust,13,0.052
+Gemma 4 E4B,KY,4,joy,fear,17,0.068
+Gemma 4 E4B,KY,4,joy,joy,149,0.596
+Gemma 4 E4B,KY,4,joy,sadness,20,0.08
+Gemma 4 E4B,KY,4,joy,surprise,25,0.1
+Gemma 4 E4B,KY,4,sadness,anger,37,0.148
+Gemma 4 E4B,KY,4,sadness,disgust,27,0.108
+Gemma 4 E4B,KY,4,sadness,fear,19,0.076
+Gemma 4 E4B,KY,4,sadness,joy,22,0.088
+Gemma 4 E4B,KY,4,sadness,sadness,108,0.432
+Gemma 4 E4B,KY,4,sadness,surprise,37,0.148
+Gemma 4 E4B,KY,4,surprise,anger,43,0.172
+Gemma 4 E4B,KY,4,surprise,disgust,15,0.06
+Gemma 4 E4B,KY,4,surprise,fear,24,0.096
+Gemma 4 E4B,KY,4,surprise,joy,25,0.1
+Gemma 4 E4B,KY,4,surprise,sadness,32,0.128
+Gemma 4 E4B,KY,4,surprise,surprise,111,0.444
+Qwen3-8B,EN,10,anger,anger,105,0.4565
+Qwen3-8B,EN,10,anger,disgust,36,0.1565
+Qwen3-8B,EN,10,anger,fear,14,0.0609
+Qwen3-8B,EN,10,anger,joy,8,0.0348
+Qwen3-8B,EN,10,anger,sadness,34,0.1478
+Qwen3-8B,EN,10,anger,surprise,33,0.1435
+Qwen3-8B,EN,10,disgust,anger,43,0.172
+Qwen3-8B,EN,10,disgust,disgust,136,0.544
+Qwen3-8B,EN,10,disgust,fear,28,0.112
+Qwen3-8B,EN,10,disgust,joy,7,0.028
+Qwen3-8B,EN,10,disgust,sadness,17,0.068
+Qwen3-8B,EN,10,disgust,surprise,19,0.076
+Qwen3-8B,EN,10,fear,anger,10,0.04
+Qwen3-8B,EN,10,fear,disgust,30,0.12
+Qwen3-8B,EN,10,fear,fear,176,0.704
+Qwen3-8B,EN,10,fear,joy,9,0.036
+Qwen3-8B,EN,10,fear,sadness,13,0.052
+Qwen3-8B,EN,10,fear,surprise,12,0.048
+Qwen3-8B,EN,10,joy,anger,9,0.036
+Qwen3-8B,EN,10,joy,disgust,6,0.024
+Qwen3-8B,EN,10,joy,fear,4,0.016
+Qwen3-8B,EN,10,joy,joy,186,0.744
+Qwen3-8B,EN,10,joy,sadness,14,0.056
+Qwen3-8B,EN,10,joy,surprise,31,0.124
+Qwen3-8B,EN,10,sadness,anger,26,0.104
+Qwen3-8B,EN,10,sadness,disgust,28,0.112
+Qwen3-8B,EN,10,sadness,fear,15,0.06
+Qwen3-8B,EN,10,sadness,joy,15,0.06
+Qwen3-8B,EN,10,sadness,sadness,146,0.584
+Qwen3-8B,EN,10,sadness,surprise,20,0.08
+Qwen3-8B,EN,10,surprise,anger,35,0.14
+Qwen3-8B,EN,10,surprise,disgust,18,0.072
+Qwen3-8B,EN,10,surprise,fear,7,0.028
+Qwen3-8B,EN,10,surprise,joy,24,0.096
+Qwen3-8B,EN,10,surprise,sadness,19,0.076
+Qwen3-8B,EN,10,surprise,surprise,147,0.588
+Qwen3-8B,RU,11,anger,anger,97,0.4217
+Qwen3-8B,RU,11,anger,disgust,39,0.1696
+Qwen3-8B,RU,11,anger,fear,10,0.0435
+Qwen3-8B,RU,11,anger,joy,14,0.0609
+Qwen3-8B,RU,11,anger,sadness,37,0.1609
+Qwen3-8B,RU,11,anger,surprise,33,0.1435
+Qwen3-8B,RU,11,disgust,anger,35,0.14
+Qwen3-8B,RU,11,disgust,disgust,134,0.536
+Qwen3-8B,RU,11,disgust,fear,33,0.132
+Qwen3-8B,RU,11,disgust,joy,13,0.052
+Qwen3-8B,RU,11,disgust,sadness,23,0.092
+Qwen3-8B,RU,11,disgust,surprise,12,0.048
+Qwen3-8B,RU,11,fear,anger,15,0.06
+Qwen3-8B,RU,11,fear,disgust,28,0.112
+Qwen3-8B,RU,11,fear,fear,162,0.648
+Qwen3-8B,RU,11,fear,joy,5,0.02
+Qwen3-8B,RU,11,fear,sadness,22,0.088
+Qwen3-8B,RU,11,fear,surprise,18,0.072
+Qwen3-8B,RU,11,joy,anger,14,0.056
+Qwen3-8B,RU,11,joy,disgust,10,0.04
+Qwen3-8B,RU,11,joy,fear,7,0.028
+Qwen3-8B,RU,11,joy,joy,192,0.768
+Qwen3-8B,RU,11,joy,sadness,5,0.02
+Qwen3-8B,RU,11,joy,surprise,22,0.088
+Qwen3-8B,RU,11,sadness,anger,31,0.124
+Qwen3-8B,RU,11,sadness,disgust,18,0.072
+Qwen3-8B,RU,11,sadness,fear,17,0.068
+Qwen3-8B,RU,11,sadness,joy,14,0.056
+Qwen3-8B,RU,11,sadness,sadness,137,0.548
+Qwen3-8B,RU,11,sadness,surprise,33,0.132
+Qwen3-8B,RU,11,surprise,anger,35,0.14
+Qwen3-8B,RU,11,surprise,disgust,21,0.084
+Qwen3-8B,RU,11,surprise,fear,16,0.064
+Qwen3-8B,RU,11,surprise,joy,21,0.084
+Qwen3-8B,RU,11,surprise,sadness,17,0.068
+Qwen3-8B,RU,11,surprise,surprise,140,0.56
+Qwen3-8B,KY,9,anger,anger,82,0.3565
+Qwen3-8B,KY,9,anger,disgust,33,0.1435
+Qwen3-8B,KY,9,anger,fear,18,0.0783
+Qwen3-8B,KY,9,anger,joy,23,0.1
+Qwen3-8B,KY,9,anger,sadness,43,0.187
+Qwen3-8B,KY,9,anger,surprise,31,0.1348
+Qwen3-8B,KY,9,disgust,anger,32,0.128
+Qwen3-8B,KY,9,disgust,disgust,123,0.492
+Qwen3-8B,KY,9,disgust,fear,41,0.164
+Qwen3-8B,KY,9,disgust,joy,15,0.06
+Qwen3-8B,KY,9,disgust,sadness,20,0.08
+Qwen3-8B,KY,9,disgust,surprise,19,0.076
+Qwen3-8B,KY,9,fear,anger,14,0.056
+Qwen3-8B,KY,9,fear,disgust,45,0.18
+Qwen3-8B,KY,9,fear,fear,134,0.536
+Qwen3-8B,KY,9,fear,joy,16,0.064
+Qwen3-8B,KY,9,fear,sadness,25,0.1
+Qwen3-8B,KY,9,fear,surprise,16,0.064
+Qwen3-8B,KY,9,joy,anger,25,0.1
+Qwen3-8B,KY,9,joy,disgust,11,0.044
+Qwen3-8B,KY,9,joy,fear,15,0.06
+Qwen3-8B,KY,9,joy,joy,145,0.58
+Qwen3-8B,KY,9,joy,sadness,25,0.1
+Qwen3-8B,KY,9,joy,surprise,29,0.116
+Qwen3-8B,KY,9,sadness,anger,35,0.14
+Qwen3-8B,KY,9,sadness,disgust,19,0.076
+Qwen3-8B,KY,9,sadness,fear,23,0.092
+Qwen3-8B,KY,9,sadness,joy,23,0.092
+Qwen3-8B,KY,9,sadness,sadness,109,0.436
+Qwen3-8B,KY,9,sadness,surprise,41,0.164
+Qwen3-8B,KY,9,surprise,anger,37,0.148
+Qwen3-8B,KY,9,surprise,disgust,16,0.064
+Qwen3-8B,KY,9,surprise,fear,24,0.096
+Qwen3-8B,KY,9,surprise,joy,24,0.096
+Qwen3-8B,KY,9,surprise,sadness,28,0.112
+Qwen3-8B,KY,9,surprise,surprise,121,0.484
+Llama-3.1-8B,EN,1,anger,anger,103,0.4478
+Llama-3.1-8B,EN,1,anger,disgust,40,0.1739
+Llama-3.1-8B,EN,1,anger,fear,12,0.0522
+Llama-3.1-8B,EN,1,anger,joy,6,0.0261
+Llama-3.1-8B,EN,1,anger,sadness,34,0.1478
+Llama-3.1-8B,EN,1,anger,surprise,35,0.1522
+Llama-3.1-8B,EN,1,disgust,anger,39,0.156
+Llama-3.1-8B,EN,1,disgust,disgust,143,0.572
+Llama-3.1-8B,EN,1,disgust,fear,25,0.1
+Llama-3.1-8B,EN,1,disgust,joy,10,0.04
+Llama-3.1-8B,EN,1,disgust,sadness,16,0.064
+Llama-3.1-8B,EN,1,disgust,surprise,17,0.068
+Llama-3.1-8B,EN,1,fear,anger,12,0.048
+Llama-3.1-8B,EN,1,fear,disgust,19,0.076
+Llama-3.1-8B,EN,1,fear,fear,189,0.756
+Llama-3.1-8B,EN,1,fear,joy,3,0.012
+Llama-3.1-8B,EN,1,fear,sadness,12,0.048
+Llama-3.1-8B,EN,1,fear,surprise,15,0.06
+Llama-3.1-8B,EN,1,joy,anger,13,0.052
+Llama-3.1-8B,EN,1,joy,disgust,11,0.044
+Llama-3.1-8B,EN,1,joy,fear,4,0.016
+Llama-3.1-8B,EN,1,joy,joy,189,0.756
+Llama-3.1-8B,EN,1,joy,sadness,15,0.06
+Llama-3.1-8B,EN,1,joy,surprise,18,0.072
+Llama-3.1-8B,EN,1,sadness,anger,34,0.136
+Llama-3.1-8B,EN,1,sadness,disgust,17,0.068
+Llama-3.1-8B,EN,1,sadness,fear,13,0.052
+Llama-3.1-8B,EN,1,sadness,joy,11,0.044
+Llama-3.1-8B,EN,1,sadness,sadness,147,0.588
+Llama-3.1-8B,EN,1,sadness,surprise,28,0.112
+Llama-3.1-8B,EN,1,surprise,anger,30,0.12
+Llama-3.1-8B,EN,1,surprise,disgust,13,0.052
+Llama-3.1-8B,EN,1,surprise,fear,9,0.036
+Llama-3.1-8B,EN,1,surprise,joy,23,0.092
+Llama-3.1-8B,EN,1,surprise,sadness,21,0.084
+Llama-3.1-8B,EN,1,surprise,surprise,154,0.616
+Llama-3.1-8B,RU,19,anger,anger,109,0.4739
+Llama-3.1-8B,RU,19,anger,disgust,28,0.1217
+Llama-3.1-8B,RU,19,anger,fear,15,0.0652
+Llama-3.1-8B,RU,19,anger,joy,9,0.0391
+Llama-3.1-8B,RU,19,anger,sadness,29,0.1261
+Llama-3.1-8B,RU,19,anger,surprise,40,0.1739
+Llama-3.1-8B,RU,19,disgust,anger,34,0.136
+Llama-3.1-8B,RU,19,disgust,disgust,138,0.552
+Llama-3.1-8B,RU,19,disgust,fear,30,0.12
+Llama-3.1-8B,RU,19,disgust,joy,11,0.044
+Llama-3.1-8B,RU,19,disgust,sadness,21,0.084
+Llama-3.1-8B,RU,19,disgust,surprise,16,0.064
+Llama-3.1-8B,RU,19,fear,anger,20,0.08
+Llama-3.1-8B,RU,19,fear,disgust,35,0.14
+Llama-3.1-8B,RU,19,fear,fear,152,0.608
+Llama-3.1-8B,RU,19,fear,joy,10,0.04
+Llama-3.1-8B,RU,19,fear,sadness,14,0.056
+Llama-3.1-8B,RU,19,fear,surprise,19,0.076
+Llama-3.1-8B,RU,19,joy,anger,13,0.052
+Llama-3.1-8B,RU,19,joy,disgust,11,0.044
+Llama-3.1-8B,RU,19,joy,fear,8,0.032
+Llama-3.1-8B,RU,19,joy,joy,175,0.7
+Llama-3.1-8B,RU,19,joy,sadness,16,0.064
+Llama-3.1-8B,RU,19,joy,surprise,27,0.108
+Llama-3.1-8B,RU,19,sadness,anger,31,0.124
+Llama-3.1-8B,RU,19,sadness,disgust,28,0.112
+Llama-3.1-8B,RU,19,sadness,fear,14,0.056
+Llama-3.1-8B,RU,19,sadness,joy,15,0.06
+Llama-3.1-8B,RU,19,sadness,sadness,141,0.564
+Llama-3.1-8B,RU,19,sadness,surprise,21,0.084
+Llama-3.1-8B,RU,19,surprise,anger,29,0.116
+Llama-3.1-8B,RU,19,surprise,disgust,21,0.084
+Llama-3.1-8B,RU,19,surprise,fear,22,0.088
+Llama-3.1-8B,RU,19,surprise,joy,27,0.108
+Llama-3.1-8B,RU,19,surprise,sadness,25,0.1
+Llama-3.1-8B,RU,19,surprise,surprise,126,0.504
+Llama-3.1-8B,KY,3,anger,anger,74,0.3217
+Llama-3.1-8B,KY,3,anger,disgust,39,0.1696
+Llama-3.1-8B,KY,3,anger,fear,23,0.1
+Llama-3.1-8B,KY,3,anger,joy,23,0.1
+Llama-3.1-8B,KY,3,anger,sadness,38,0.1652
+Llama-3.1-8B,KY,3,anger,surprise,33,0.1435
+Llama-3.1-8B,KY,3,disgust,anger,39,0.156
+Llama-3.1-8B,KY,3,disgust,disgust,113,0.452
+Llama-3.1-8B,KY,3,disgust,fear,33,0.132
+Llama-3.1-8B,KY,3,disgust,joy,16,0.064
+Llama-3.1-8B,KY,3,disgust,sadness,24,0.096
+Llama-3.1-8B,KY,3,disgust,surprise,25,0.1
+Llama-3.1-8B,KY,3,fear,anger,11,0.044
+Llama-3.1-8B,KY,3,fear,disgust,36,0.144
+Llama-3.1-8B,KY,3,fear,fear,139,0.556
+Llama-3.1-8B,KY,3,fear,joy,22,0.088
+Llama-3.1-8B,KY,3,fear,sadness,25,0.1
+Llama-3.1-8B,KY,3,fear,surprise,17,0.068
+Llama-3.1-8B,KY,3,joy,anger,20,0.08
+Llama-3.1-8B,KY,3,joy,disgust,11,0.044
+Llama-3.1-8B,KY,3,joy,fear,21,0.084
+Llama-3.1-8B,KY,3,joy,joy,145,0.58
+Llama-3.1-8B,KY,3,joy,sadness,24,0.096
+Llama-3.1-8B,KY,3,joy,surprise,29,0.116
+Llama-3.1-8B,KY,3,sadness,anger,27,0.108
+Llama-3.1-8B,KY,3,sadness,disgust,25,0.1
+Llama-3.1-8B,KY,3,sadness,fear,27,0.108
+Llama-3.1-8B,KY,3,sadness,joy,15,0.06
+Llama-3.1-8B,KY,3,sadness,sadness,120,0.48
+Llama-3.1-8B,KY,3,sadness,surprise,36,0.144
+Llama-3.1-8B,KY,3,surprise,anger,34,0.136
+Llama-3.1-8B,KY,3,surprise,disgust,21,0.084
+Llama-3.1-8B,KY,3,surprise,fear,22,0.088
+Llama-3.1-8B,KY,3,surprise,joy,27,0.108
+Llama-3.1-8B,KY,3,surprise,sadness,29,0.116
+Llama-3.1-8B,KY,3,surprise,surprise,117,0.468
+Mistral-7B,EN,5,anger,anger,115,0.5
+Mistral-7B,EN,5,anger,disgust,36,0.1565
+Mistral-7B,EN,5,anger,fear,10,0.0435
+Mistral-7B,EN,5,anger,joy,8,0.0348
+Mistral-7B,EN,5,anger,sadness,35,0.1522
+Mistral-7B,EN,5,anger,surprise,26,0.113
+Mistral-7B,EN,5,disgust,anger,45,0.18
+Mistral-7B,EN,5,disgust,disgust,141,0.564
+Mistral-7B,EN,5,disgust,fear,26,0.104
+Mistral-7B,EN,5,disgust,joy,5,0.02
+Mistral-7B,EN,5,disgust,sadness,19,0.076
+Mistral-7B,EN,5,disgust,surprise,14,0.056
+Mistral-7B,EN,5,fear,anger,18,0.072
+Mistral-7B,EN,5,fear,disgust,22,0.088
+Mistral-7B,EN,5,fear,fear,174,0.696
+Mistral-7B,EN,5,fear,joy,5,0.02
+Mistral-7B,EN,5,fear,sadness,14,0.056
+Mistral-7B,EN,5,fear,surprise,17,0.068
+Mistral-7B,EN,5,joy,anger,11,0.044
+Mistral-7B,EN,5,joy,disgust,9,0.036
+Mistral-7B,EN,5,joy,fear,6,0.024
+Mistral-7B,EN,5,joy,joy,185,0.74
+Mistral-7B,EN,5,joy,sadness,13,0.052
+Mistral-7B,EN,5,joy,surprise,26,0.104
+Mistral-7B,EN,5,sadness,anger,24,0.096
+Mistral-7B,EN,5,sadness,disgust,26,0.104
+Mistral-7B,EN,5,sadness,fear,17,0.068
+Mistral-7B,EN,5,sadness,joy,10,0.04
+Mistral-7B,EN,5,sadness,sadness,147,0.588
+Mistral-7B,EN,5,sadness,surprise,26,0.104
+Mistral-7B,EN,5,surprise,anger,41,0.164
+Mistral-7B,EN,5,surprise,disgust,14,0.056
+Mistral-7B,EN,5,surprise,fear,13,0.052
+Mistral-7B,EN,5,surprise,joy,21,0.084
+Mistral-7B,EN,5,surprise,sadness,19,0.076
+Mistral-7B,EN,5,surprise,surprise,142,0.568
+Mistral-7B,RU,9,anger,anger,95,0.413
+Mistral-7B,RU,9,anger,disgust,38,0.1652
+Mistral-7B,RU,9,anger,fear,15,0.0652
+Mistral-7B,RU,9,anger,joy,9,0.0391
+Mistral-7B,RU,9,anger,sadness,36,0.1565
+Mistral-7B,RU,9,anger,surprise,37,0.1609
+Mistral-7B,RU,9,disgust,anger,39,0.156
+Mistral-7B,RU,9,disgust,disgust,126,0.504
+Mistral-7B,RU,9,disgust,fear,31,0.124
+Mistral-7B,RU,9,disgust,joy,14,0.056
+Mistral-7B,RU,9,disgust,sadness,23,0.092
+Mistral-7B,RU,9,disgust,surprise,17,0.068
+Mistral-7B,RU,9,fear,anger,20,0.08
+Mistral-7B,RU,9,fear,disgust,31,0.124
+Mistral-7B,RU,9,fear,fear,156,0.624
+Mistral-7B,RU,9,fear,joy,9,0.036
+Mistral-7B,RU,9,fear,sadness,15,0.06
+Mistral-7B,RU,9,fear,surprise,19,0.076
+Mistral-7B,RU,9,joy,anger,12,0.048
+Mistral-7B,RU,9,joy,disgust,7,0.028
+Mistral-7B,RU,9,joy,fear,10,0.04
+Mistral-7B,RU,9,joy,joy,188,0.752
+Mistral-7B,RU,9,joy,sadness,12,0.048
+Mistral-7B,RU,9,joy,surprise,21,0.084
+Mistral-7B,RU,9,sadness,anger,36,0.144
+Mistral-7B,RU,9,sadness,disgust,21,0.084
+Mistral-7B,RU,9,sadness,fear,19,0.076
+Mistral-7B,RU,9,sadness,joy,13,0.052
+Mistral-7B,RU,9,sadness,sadness,133,0.532
+Mistral-7B,RU,9,sadness,surprise,28,0.112
+Mistral-7B,RU,9,surprise,anger,35,0.14
+Mistral-7B,RU,9,surprise,disgust,15,0.06
+Mistral-7B,RU,9,surprise,fear,12,0.048
+Mistral-7B,RU,9,surprise,joy,22,0.088
+Mistral-7B,RU,9,surprise,sadness,21,0.084
+Mistral-7B,RU,9,surprise,surprise,145,0.58
+Mistral-7B,KY,5,anger,anger,69,0.3
+Mistral-7B,KY,5,anger,disgust,32,0.1391
+Mistral-7B,KY,5,anger,fear,23,0.1
+Mistral-7B,KY,5,anger,joy,16,0.0696
+Mistral-7B,KY,5,anger,sadness,41,0.1783
+Mistral-7B,KY,5,anger,surprise,49,0.213
+Mistral-7B,KY,5,disgust,anger,36,0.144
+Mistral-7B,KY,5,disgust,disgust,119,0.476
+Mistral-7B,KY,5,disgust,fear,37,0.148
+Mistral-7B,KY,5,disgust,joy,15,0.06
+Mistral-7B,KY,5,disgust,sadness,20,0.08
+Mistral-7B,KY,5,disgust,surprise,23,0.092
+Mistral-7B,KY,5,fear,anger,19,0.076
+Mistral-7B,KY,5,fear,disgust,41,0.164
+Mistral-7B,KY,5,fear,fear,130,0.52
+Mistral-7B,KY,5,fear,joy,13,0.052
+Mistral-7B,KY,5,fear,sadness,23,0.092
+Mistral-7B,KY,5,fear,surprise,24,0.096
+Mistral-7B,KY,5,joy,anger,25,0.1
+Mistral-7B,KY,5,joy,disgust,18,0.072
+Mistral-7B,KY,5,joy,fear,13,0.052
+Mistral-7B,KY,5,joy,joy,141,0.564
+Mistral-7B,KY,5,joy,sadness,30,0.12
+Mistral-7B,KY,5,joy,surprise,23,0.092
+Mistral-7B,KY,5,sadness,anger,36,0.144
+Mistral-7B,KY,5,sadness,disgust,31,0.124
+Mistral-7B,KY,5,sadness,fear,16,0.064
+Mistral-7B,KY,5,sadness,joy,27,0.108
+Mistral-7B,KY,5,sadness,sadness,103,0.412
+Mistral-7B,KY,5,sadness,surprise,37,0.148
+Mistral-7B,KY,5,surprise,anger,37,0.148
+Mistral-7B,KY,5,surprise,disgust,21,0.084
+Mistral-7B,KY,5,surprise,fear,25,0.1
+Mistral-7B,KY,5,surprise,joy,26,0.104
+Mistral-7B,KY,5,surprise,sadness,36,0.144
+Mistral-7B,KY,5,surprise,surprise,105,0.42
+XLM-R,EN,11,anger,anger,86,0.3739
+XLM-R,EN,11,anger,disgust,42,0.1826
+XLM-R,EN,11,anger,fear,15,0.0652
+XLM-R,EN,11,anger,joy,16,0.0696
+XLM-R,EN,11,anger,sadness,35,0.1522
+XLM-R,EN,11,anger,surprise,36,0.1565
+XLM-R,EN,11,disgust,anger,43,0.172
+XLM-R,EN,11,disgust,disgust,133,0.532
+XLM-R,EN,11,disgust,fear,20,0.08
+XLM-R,EN,11,disgust,joy,10,0.04
+XLM-R,EN,11,disgust,sadness,22,0.088
+XLM-R,EN,11,disgust,surprise,22,0.088
+XLM-R,EN,11,fear,anger,19,0.076
+XLM-R,EN,11,fear,disgust,26,0.104
+XLM-R,EN,11,fear,fear,159,0.636
+XLM-R,EN,11,fear,joy,6,0.024
+XLM-R,EN,11,fear,sadness,22,0.088
+XLM-R,EN,11,fear,surprise,18,0.072
+XLM-R,EN,11,joy,anger,12,0.048
+XLM-R,EN,11,joy,disgust,10,0.04
+XLM-R,EN,11,joy,fear,13,0.052
+XLM-R,EN,11,joy,joy,167,0.668
+XLM-R,EN,11,joy,sadness,19,0.076
+XLM-R,EN,11,joy,surprise,29,0.116
+XLM-R,EN,11,sadness,anger,38,0.152
+XLM-R,EN,11,sadness,disgust,23,0.092
+XLM-R,EN,11,sadness,fear,18,0.072
+XLM-R,EN,11,sadness,joy,10,0.04
+XLM-R,EN,11,sadness,sadness,130,0.52
+XLM-R,EN,11,sadness,surprise,31,0.124
+XLM-R,EN,11,surprise,anger,31,0.124
+XLM-R,EN,11,surprise,disgust,15,0.06
+XLM-R,EN,11,surprise,fear,17,0.068
+XLM-R,EN,11,surprise,joy,23,0.092
+XLM-R,EN,11,surprise,sadness,24,0.096
+XLM-R,EN,11,surprise,surprise,140,0.56
+XLM-R,RU,21,anger,anger,92,0.4
+XLM-R,RU,21,anger,disgust,39,0.1696
+XLM-R,RU,21,anger,fear,15,0.0652
+XLM-R,RU,21,anger,joy,14,0.0609
+XLM-R,RU,21,anger,sadness,37,0.1609
+XLM-R,RU,21,anger,surprise,33,0.1435
+XLM-R,RU,21,disgust,anger,48,0.192
+XLM-R,RU,21,disgust,disgust,110,0.44
+XLM-R,RU,21,disgust,fear,37,0.148
+XLM-R,RU,21,disgust,joy,10,0.04
+XLM-R,RU,21,disgust,sadness,23,0.092
+XLM-R,RU,21,disgust,surprise,22,0.088
+XLM-R,RU,21,fear,anger,21,0.084
+XLM-R,RU,21,fear,disgust,43,0.172
+XLM-R,RU,21,fear,fear,133,0.532
+XLM-R,RU,21,fear,joy,11,0.044
+XLM-R,RU,21,fear,sadness,25,0.1
+XLM-R,RU,21,fear,surprise,17,0.068
+XLM-R,RU,21,joy,anger,21,0.084
+XLM-R,RU,21,joy,disgust,12,0.048
+XLM-R,RU,21,joy,fear,16,0.064
+XLM-R,RU,21,joy,joy,147,0.588
+XLM-R,RU,21,joy,sadness,20,0.08
+XLM-R,RU,21,joy,surprise,34,0.136
+XLM-R,RU,21,sadness,anger,31,0.124
+XLM-R,RU,21,sadness,disgust,27,0.108
+XLM-R,RU,21,sadness,fear,33,0.132
+XLM-R,RU,21,sadness,joy,17,0.068
+XLM-R,RU,21,sadness,sadness,114,0.456
+XLM-R,RU,21,sadness,surprise,28,0.112
+XLM-R,RU,21,surprise,anger,31,0.124
+XLM-R,RU,21,surprise,disgust,28,0.112
+XLM-R,RU,21,surprise,fear,20,0.08
+XLM-R,RU,21,surprise,joy,29,0.116
+XLM-R,RU,21,surprise,sadness,25,0.1
+XLM-R,RU,21,surprise,surprise,117,0.468
+XLM-R,KY,14,anger,anger,85,0.3696
+XLM-R,KY,14,anger,disgust,47,0.2043
+XLM-R,KY,14,anger,fear,18,0.0783
+XLM-R,KY,14,anger,joy,12,0.0522
+XLM-R,KY,14,anger,sadness,31,0.1348
+XLM-R,KY,14,anger,surprise,37,0.1609
+XLM-R,KY,14,disgust,anger,35,0.14
+XLM-R,KY,14,disgust,disgust,99,0.396
+XLM-R,KY,14,disgust,fear,40,0.16
+XLM-R,KY,14,disgust,joy,18,0.072
+XLM-R,KY,14,disgust,sadness,34,0.136
+XLM-R,KY,14,disgust,surprise,24,0.096
+XLM-R,KY,14,fear,anger,27,0.108
+XLM-R,KY,14,fear,disgust,44,0.176
+XLM-R,KY,14,fear,fear,126,0.504
+XLM-R,KY,14,fear,joy,12,0.048
+XLM-R,KY,14,fear,sadness,28,0.112
+XLM-R,KY,14,fear,surprise,13,0.052
+XLM-R,KY,14,joy,anger,17,0.068
+XLM-R,KY,14,joy,disgust,20,0.08
+XLM-R,KY,14,joy,fear,10,0.04
+XLM-R,KY,14,joy,joy,153,0.612
+XLM-R,KY,14,joy,sadness,19,0.076
+XLM-R,KY,14,joy,surprise,31,0.124
+XLM-R,KY,14,sadness,anger,35,0.14
+XLM-R,KY,14,sadness,disgust,28,0.112
+XLM-R,KY,14,sadness,fear,21,0.084
+XLM-R,KY,14,sadness,joy,23,0.092
+XLM-R,KY,14,sadness,sadness,113,0.452
+XLM-R,KY,14,sadness,surprise,30,0.12
+XLM-R,KY,14,surprise,anger,39,0.156
+XLM-R,KY,14,surprise,disgust,21,0.084
+XLM-R,KY,14,surprise,fear,25,0.1
+XLM-R,KY,14,surprise,joy,33,0.132
+XLM-R,KY,14,surprise,sadness,29,0.116
+XLM-R,KY,14,surprise,surprise,103,0.412
